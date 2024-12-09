@@ -8,6 +8,7 @@ use App\Models\Notas;
 class NotasController extends Controller
 {
     public function index(){
-        return "<h1>Hola mundo</h1>";
+        $notasList = Notas::all();
+        return view('notas.index', compact('notasList'));
     }
 }
